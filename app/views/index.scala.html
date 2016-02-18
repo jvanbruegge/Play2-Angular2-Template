@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="/" />
+        <title>Test Application</title>
+        <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+        <!-- 1. Load libraries -->
+        <!-- IE required polyfills, in this exact order -->
+        <script src="assets/javascripts/classList.js"></script>
+        
+        <script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("es5-shim.min.js"))'></script>
+  		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("es6-shim.min.js"))'></script>
+  		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("dist/system-polyfills.js"))'></script>
+  		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("dist/system.js"))'></script>
+  		
+  		<script src="assets/javascripts/shims_for_IE.js"></script>
+
+  		<!-- Angular polyfill required everywhere -->
+  		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("angular2-polyfills.js"))'></script>
+        <script src='@routes.Assets.at("lib/rxjs/bundles/Rx.js")'></script>
+		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("angular2.js"))'></script>
+ 		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("router.min.js"))'></script>
+ 		<script type="text/javascript" src='@routes.WebJarAssets.at(WebJarAssets.locate("http.min.js"))'></script>
+    
+    	<link rel="stylesheet" href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+        <!-- 2. Configure SystemJS -->
+        <script>
+            System.config({
+                //transpiler: "traceur",
+                packages: {        
+                    client: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+            System.import('client/boot')
+                .then(null, console.error.bind(console));    
+        </script>
+    </head>
+
+    <!-- 3. Display the application -->
+    <body>
+        <my-app></my-app>
+    </body>
+</html>

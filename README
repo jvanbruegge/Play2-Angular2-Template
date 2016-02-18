@@ -1,0 +1,5 @@
+Welcome to the Play2-Angular2 template
+
+To use this, you need to have ruby installed and the "gem" program available in your PATH, as well as npm
+
+To set everything up, you can use Start.bat (on a non-windows machine simply do the commands yourself)

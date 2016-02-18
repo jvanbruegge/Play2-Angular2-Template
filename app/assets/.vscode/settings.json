@@ -1,0 +1,18 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": 
+    {
+        "app/**/*.js": true,
+        "app/**/*.map": true,
+        "public/css/**/*": true
+    },
+    
+    // Is git enabled
+    "git.enabled": false,
+
+    // Path to the git executable
+    "git.path": null,
+
+    // Whether auto fetching is enabled.
+    "git.autofetch": false
+}

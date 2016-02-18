@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                          	controllers.Application.index()
+
+
+# Disable CORS
+OPTIONS /*all                       controllers.Application.preflight(all)
+
+# Map static resources from the /public folder
+GET		/client/*file           controllers.Assets.versioned(path="/public/client", file: Asset)
+GET		/assets/*file           controllers.Assets.at(path="/public", file)
+
+# WebJars
+GET		/webjars/*file          controllers.WebJarAssets.at(file)
